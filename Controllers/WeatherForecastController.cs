@@ -3,7 +3,7 @@
 namespace idflNet.Controllers
 {
     [ApiController]
-    [Route("api/page-meta")]
+    [Route("api/home-meta")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

@@ -1,1 +1,1 @@
-export const HOME_META_DATA:string ="api/page-meta"
+export const HOME_META_DATA:string ="api/home-meta"
