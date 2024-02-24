@@ -9,6 +9,7 @@ namespace idflNet.Data
         public DbSet<LanguageModel> Language { get; set; }
         public DbSet<UserModel> User { get; set; }
         public DbSet<UserClientInformationModel> UserClientInformation { get; set; }
+        public DbSet<PageMetaDataModel> PageMetaData { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder
@@ -18,6 +19,7 @@ namespace idflNet.Data
         {
             base.OnModelCreating(modelBuilder);
             RelationGenerator.Run(modelBuilder);
+            DataGenerator.Run(modelBuilder);
         }
     }
 }

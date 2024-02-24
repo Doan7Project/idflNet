@@ -10,10 +10,15 @@ namespace idflNet.Data
             GenerateLanguageRelation(modelBuilder);
             GenerateUserRelation(modelBuilder);
             GenerateUserClientRelation(modelBuilder);
+            GeneratePageMetaRelation(modelBuilder);
         }
         private static void GenerateLanguageRelation(ModelBuilder modelBuilder){
              modelBuilder.Entity<LanguageModel>(entity =>{
                 entity.ToTable("dblanguage");
+                entity.HasMany(m=>m.PageMetaDataModels)
+                .WithOne(o=>o.LanguageModel)
+                .HasConstraintName("fk_language_pagemetadata")
+                .HasForeignKey(k=>k.LanguageId);
             });
         }
         private static void GenerateUserRelation(ModelBuilder modelBuilder){
@@ -28,6 +33,11 @@ namespace idflNet.Data
         private static void GenerateUserClientRelation(ModelBuilder modelBuilder){
              modelBuilder.Entity<UserClientInformationModel>(entity =>{
                 entity.ToTable("dbuserclient");
+            });
+        }
+            private static void GeneratePageMetaRelation(ModelBuilder modelBuilder){
+             modelBuilder.Entity<PageMetaDataModel>(entity =>{
+                entity.ToTable("dbpagemetadata");
             });
         }
     }
