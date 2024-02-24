@@ -19,13 +19,8 @@
 ## Development Enviromment
 
 
-- run inital database
-  `dotnet ef database update`
-
 - run application
   `dotnet run`
-
-
 ### create-generate new database schema
 `./Commands/addNewSchema.sh`
 
@@ -33,3 +28,6 @@
 
 `./Commands/reUpdateDatabase.sh`
 
+### step for run app for FE
+step 1: run ./Commands/reUpdateDatabase.sh (using bash)
+step 2: dotnet run (using powershell)

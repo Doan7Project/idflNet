@@ -1,11 +1,11 @@
 import { HOME_META_DATA } from "pathUrl/PathUrl";
-import { FetchData } from "./components/client/home/FetchData";
+import { HomeMetaData } from "components/client/home/HomePageMetaData";
 
 const AppRoutes = [
 
   {
     index: true,
-    element: <FetchData apiUrl = {HOME_META_DATA}/>
+    element: <HomeMetaData apiUrl = {HOME_META_DATA}/>
   }
 ];
 
