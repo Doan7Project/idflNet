@@ -1,0 +1,1 @@
+export const HOME_META_DATA:string ="api/page-meta"
