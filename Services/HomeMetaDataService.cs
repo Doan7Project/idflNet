@@ -1,4 +1,5 @@
 using idflNet.Constants;
+using idflNet.Core.Models.BaseModel;
 using idflNet.Core.Resutls;
 using idflNet.Data;
 
@@ -12,24 +13,24 @@ namespace Services
             _context = context;
         }
 
-        public HomeMetaDataResult HomeMetaResult()
+        public HomeMetaDataResult HomeMetaResult(IParams queryParams)
         {
             return new HomeMetaDataResult
             {
-                SessionServiceResult = ServiceItems()
+                SessionServiceResult = ServiceItems(queryParams)
             };
         }
-        public SessionServiceResult ServiceItems()
+        public SessionServiceResult ServiceItems(IParams queryParams)
         {
             var data = _context.PageMetaData
             .Where(
-            w=>w.Key.Equals(HomePageMetaDataKey.Home) 
+            w => w.Key.Equals(HomePageMetaDataKey.Home)
             && w.Session.Equals(HomePageMetaDataSession.SessionService)
-            && w.LanguageModel.Code == "en")
-            .ToList();
-            string header = data.FirstOrDefault(s=>s.Field.Equals(HomePageMetaDataField.Header)).Value;
+            && w.LanguageModel.Code == (queryParams.Language != null ? queryParams.Language : LanguageConstant.LangValue.vi.ToString())).ToList();
+            string header = data.FirstOrDefault(s => s.Field.Equals(HomePageMetaDataField.Header)).Value;
             string subHeader = data.FirstOrDefault(s => s.Field.Equals(HomePageMetaDataField.SubHeader)).Value;
-            return new SessionServiceResult{
+            return new SessionServiceResult
+            {
                 Header = header,
                 SubHeader = subHeader
             };
