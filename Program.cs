@@ -1,4 +1,5 @@
 using idflNet.Data;
+using idflNet.Middlewares;
 using Microsoft.EntityFrameworkCore;
 using Services;
 
@@ -33,5 +34,6 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
-
+MyMiddlewareExtensions.UseMyMiddeware(app);
+app.UseMiddleware<LanguageMiddleware>();
 app.Run();

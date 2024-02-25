@@ -1,3 +1,4 @@
+using idflNet.Core.Models.BaseModel;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 
@@ -16,11 +17,11 @@ namespace Controllers
             _homeMetaService = homeMetaDataService;
         }
         [HttpGet]
-        public IActionResult GetAllHomeMetaData()
+        public IActionResult GetAllHomeMetaData([FromQuery] IParams queryParams)
         {
             try
-            {
-                var data = _homeMetaService.HomeMetaResult();
+            {   
+                var data = _homeMetaService.HomeMetaResult(queryParams);
                 if (data != null)
                 {
                     return Ok(data);
@@ -32,7 +33,7 @@ namespace Controllers
             catch (System.Exception ex)
             {
                 _logger.LogError("Get data home page", ex.Message);
-                return Problem("Get data home page is error");
+                return BadRequest("Get data home page is error");
             }
 
         }

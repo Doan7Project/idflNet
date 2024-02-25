@@ -1,6 +1,8 @@
 import axios from "axios";
+import LanguageUtils from "libs/languageUtil";
 import { useEffect, useState } from "react";
-
+import { useLocation } from "react-router-dom";
+import "../home/HomePageMetaData.css";
 interface HomeMetaProp {
   apiUrl: string;
 }
@@ -13,11 +15,17 @@ export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
     useState<SessionServiceResult | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const location = useLocation();
   console.log("home page data result: ", homeSessionService?.header);
+  var language = LanguageUtils.loadCurrentLanguage();
   useEffect(() => {
     const populateWeatherData = async () => {
       try {
-        const response = await axios.get(apiUrl);
+        const response = await axios.get(apiUrl, {
+          headers: {
+            Language: language,
+          },
+        });
         setHomeSessionService(response.data.sessionServiceResult);
         console.log("home page data result: ", response?.data);
 
@@ -31,14 +39,10 @@ export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
     if (apiUrl) {
       populateWeatherData();
     }
-  }, [apiUrl]);
+  }, []);
   return (
     <>
-      {loading && (
-        <div className="spinner-border m-5" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
+      {loading && <span className="loader"></span>}
       {error && <p>{error}</p>}
       {homeSessionService && (
         <div>
