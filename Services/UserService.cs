@@ -2,16 +2,15 @@ using Core.Models;
 using Core.Resutls;
 using idflNet.Constants;
 using idflNet.Core.Dtos;
-using idflNet.Utils;
+using idflNet.Repository;
 
-namespace idflNet.auth
+namespace Services
 {
-
-    public class UserService : IUserService
+    public class UserService : IUserRepository
     {
-        private readonly IJwtUtils _jwtUtils;
+        private readonly IJwtUtilRepository _jwtUtils;
 
-        public UserService(IJwtUtils jwtUtils)
+        public UserService(IJwtUtilRepository jwtUtils)
         {
             _jwtUtils = jwtUtils;
         }
@@ -41,6 +40,5 @@ namespace idflNet.auth
         {
             return _users.FirstOrDefault(x => x.Id == id);
         }
-
     }
 }

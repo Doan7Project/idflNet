@@ -2,9 +2,9 @@ using Core.Models;
 using Core.Resutls;
 using idflNet.Core.Dtos;
 
-namespace idflNet.auth
+namespace idflNet.Repository
 {
-    public interface IUserService
+    public interface IUserRepository
     {
         AuthenticateResponseResult? Authenticate(AuthenticateRequestDto model);
         IEnumerable<UserModel> GetAll();

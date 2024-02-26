@@ -1,5 +1,6 @@
 using idflNet.auth;
 using idflNet.Core.Dtos;
+using idflNet.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Controllers.common
@@ -9,8 +10,8 @@ namespace Controllers.common
     [Route("api/authenticate")]
     public class AuthenticateController : ControllerBase
     {
-        private IUserService _userService;
-        public AuthenticateController(IUserService userService)
+        private IUserRepository _userService;
+        public AuthenticateController(IUserRepository userService)
         {
             _userService = userService;
         }

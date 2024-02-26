@@ -3,6 +3,7 @@ using idflNet.auth;
 using idflNet.Constants;
 using idflNet.Data;
 using idflNet.Middlewares;
+using idflNet.Repository;
 using idflNet.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -29,8 +30,8 @@ builder.Services.AddAntiforgery(options =>
 {
     options.HeaderName = KeyConstant.CsrfHeader;
 });
-builder.Services.AddScoped<IJwtUtils, JwtUtils>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IJwtUtilRepository, JwtUtils>();
+builder.Services.AddScoped<IUserRepository, UserService>();
 builder.Services.AddTransient<HomeMetaDataService>();
 var app = builder.Build();
 

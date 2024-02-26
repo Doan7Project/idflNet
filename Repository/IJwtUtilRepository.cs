@@ -1,8 +1,8 @@
 using Core.Models;
 
-namespace idflNet.Utils
+namespace idflNet.Repository
 {
-    public interface IJwtUtils
+    public interface IJwtUtilRepository
     {
         public string GenerateJwtToken(UserModel user);
         public Guid? ValidateJwtToken(string? token);

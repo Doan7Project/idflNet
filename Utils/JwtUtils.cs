@@ -3,12 +3,13 @@ using System.Security.Claims;
 using System.Text;
 using Core.Dtos;
 using Core.Models;
+using idflNet.Repository;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace idflNet.Utils
 {
-    public class JwtUtils : IJwtUtils
+    public class JwtUtils : IJwtUtilRepository
     {
         private readonly AppSettings _appSettings;
         public JwtUtils(IOptions<AppSettings> appSettings)
