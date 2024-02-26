@@ -31,3 +31,5 @@
 ### step for run app for FE
 step 1: run ./Commands/reUpdateDatabase.sh (using bash)
 step 2: dotnet run (using powershell)
+### Document for jwt
+https://jasonwatmore.com/net-7-csharp-jwt-authentication-tutorial-without-aspnet-core-identity
