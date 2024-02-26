@@ -2,7 +2,7 @@ using idflNet.Constants;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Controllers.common
+namespace Controllers.Common
 {
     [ApiController]
     [Route("api/antiforgery")]

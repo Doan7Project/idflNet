@@ -3,7 +3,7 @@ using idflNet.Core.Dtos;
 using idflNet.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Controllers.common
+namespace Controllers.Common
 {
     [ApiController]
     [Authorize]
