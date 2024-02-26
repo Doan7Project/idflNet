@@ -1,5 +1,6 @@
 using Core.Models;
 using Core.Resutls;
+using idflNet.Constants;
 using idflNet.Core.Dtos;
 using idflNet.Utils;
 
@@ -16,7 +17,7 @@ namespace idflNet.auth
         }
         private List<UserModel> _users = new List<UserModel>
         {
-            new UserModel { Id = Guid.Parse("b34f8c35-0917-42f7-bb57-e17528b793f2"), Name = "Test", Email = "doanpham@gmail.com", Roles = "guest", Password = "test123" }
+            new UserModel { Id = Guid.Parse("b34f8c35-0917-42f7-bb57-e17528b793f2"), Name = "Test", Email = "doanpham@gmail.com", Roles = Role.User, Password = "test123" }
         };
         public AuthenticateResponseResult? Authenticate(AuthenticateRequestDto model)
         {

@@ -1,4 +1,5 @@
 using Core.Models;
+using idflNet.Constants;
 
 namespace Core.Resutls
 {
@@ -8,7 +9,7 @@ namespace Core.Resutls
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
-        public string? Roles { get; set; }
+        public Role Roles { get; set; }
         public string Token { get; set; }
 
 

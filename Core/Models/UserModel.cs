@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using idflNet.Constants;
 using idflNet.Core.Models.BaseModel;
 
 namespace Core.Models
@@ -7,7 +8,7 @@ namespace Core.Models
     {
         public string? Name { get; set; }
         public string? Email { get; set; }
-        public string? Roles { get; set; }
+        public Role Roles { get; set; }
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
         public bool IsVerified { get; set; }
