@@ -12,15 +12,18 @@ import {
   NavLink,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import "./NavMenu.css";
 import LanguageUtils from "libs/languageUtil";
 import LargeNavbarMenu from "./Large-NavbarMenu/Large-NavMenu";
+import SmallNavbarMenu from "./Small-NavbarMenu/Small-NavMenu";
+import { useWindowReponsive } from "../../../hooks/useWindowReponsive";
+import { WIDTH } from "constants/common.constant";
 export const NavMenu: React.FC<{}> = () => {
   const [collapsed, setCollapsed] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [languageLable, setLanguageLable] = useState(false);
   const toggleNavbar = () => setCollapsed(!collapsed);
   const toggleDropdown = () => setIsOpen(!isOpen);
+  const {width} = useWindowReponsive();
 
   const handleLanguageChange = (language: any) => {
     LanguageUtils.save(language, "");
@@ -39,9 +42,12 @@ export const NavMenu: React.FC<{}> = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
   return (
     <header>
-      <LargeNavbarMenu/>
+      {width <= WIDTH ?  <SmallNavbarMenu/> : <LargeNavbarMenu/>}
+      {/* <LargeNavbarMenu/> */}
+    
 
       {/* 
       <Navbar
@@ -96,3 +102,5 @@ export const NavMenu: React.FC<{}> = () => {
     </header>
   );
 };
+
+
