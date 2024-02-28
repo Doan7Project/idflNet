@@ -2,7 +2,11 @@ namespace idflNet.Core.Resutls
 {
     public class HomeMetaDataResult
     {
-        public SessionServiceResult SessionServiceResult { get; set; }
+        public List<SessionBannerResult> SessionBanners { get; set; }
+        public SessionServiceResult SessionServices { get; set; }
+    }
+    public class SessionBannerResult{
+        public string? Url { get; set; }
     }
     public class SessionServiceResult
     {

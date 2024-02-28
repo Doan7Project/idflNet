@@ -10,6 +10,7 @@ namespace idflNet.Data
         public DbSet<UserModel> User { get; set; }
         public DbSet<UserClientInformationModel> UserClientInformation { get; set; }
         public DbSet<PageMetaDataModel> PageMetaData { get; set; }
+        public DbSet<BannerHomePageModel> BannerHomePage { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder

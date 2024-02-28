@@ -1,3 +1,4 @@
+using Core.Models;
 using idflNet.Constants;
 using idflNet.Core.Models.BaseModel;
 using idflNet.Core.Resutls;
@@ -17,7 +18,8 @@ namespace Services
         {
             return new HomeMetaDataResult
             {
-                SessionServiceResult = ServiceItems(queryParams)
+                SessionBanners = SessionBannerItems(queryParams),
+                SessionServices = ServiceItems(queryParams)
             };
         }
         public SessionServiceResult ServiceItems(IParams queryParams)
@@ -34,6 +36,12 @@ namespace Services
                 Header = header,
                 SubHeader = subHeader
             };
+        }
+        public List<SessionBannerResult> SessionBannerItems(IParams queryParams){
+            var data = _context.BannerHomePage.Select(s=> new SessionBannerResult{
+                Url = s.Url
+            }).ToList();
+            return data; 
         }
     }
 }

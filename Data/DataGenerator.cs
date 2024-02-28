@@ -2,6 +2,7 @@ using Core.Models;
 using idflNet.Constants;
 using idflNet.Core.Models.BaseModel;
 using Microsoft.EntityFrameworkCore;
+using Utils;
 
 namespace idflNet.Data
 {
@@ -76,6 +77,29 @@ namespace idflNet.Data
                 HomeMetaSessionServiceHeaderEn,
                 HomeMetaSessionServiceSubHeaderVi,
                 HomeMetaSessionServiceSubHeaderEn
+            });
+            var banner_1 = new BannerHomePageModel{
+                Id = Guid.NewGuid(),
+                Url = CheckExistFileUtils.CheckExistFile("/images/default/banner_1.jpg"),
+                CreatedAt = DateTime.Now,
+            };
+            var banner_2 = new BannerHomePageModel{
+                Id = Guid.NewGuid(),
+                Url = CheckExistFileUtils.CheckExistFile("/images/default/banner_2.jpg"),
+                CreatedAt = DateTime.Now,
+            };
+            var banner_3 = new BannerHomePageModel{
+                Id = Guid.NewGuid(),
+                Url = CheckExistFileUtils.CheckExistFile("/images/default/banner_3.jpg"),
+                CreatedAt = DateTime.Now,
+            };
+               modelBuilder
+            .Entity<BannerHomePageModel>()
+            .HasData(new List<BannerHomePageModel>
+            {
+               banner_1,
+               banner_2,
+               banner_3
             });
         }
     }
