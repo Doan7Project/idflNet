@@ -5,7 +5,7 @@
   height: 4.8px;
   display: flex;
   background: rgba(9, 125, 221, 0.703);
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 .loader::after {
