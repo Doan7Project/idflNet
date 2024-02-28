@@ -14,6 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import "./NavMenu.css";
 import LanguageUtils from "libs/languageUtil";
+import LargeNavbarMenu from "./Large-NavbarMenu/Large-NavMenu";
 export const NavMenu: React.FC<{}> = () => {
   const [collapsed, setCollapsed] = useState<boolean>(true);
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -32,8 +33,17 @@ export const NavMenu: React.FC<{}> = () => {
       setLanguageLable(true);
     }
   }, []);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <header>
+      <LargeNavbarMenu/>
+
+      {/* 
       <Navbar
         className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3"
         container
@@ -63,7 +73,7 @@ export const NavMenu: React.FC<{}> = () => {
                     alt="vietnam"
                   />
                 )}
-                    {languageLable && (
+                {languageLable && (
                   <img
                     className="navbar-flat-icon"
                     src="/icons/english.png"
@@ -82,7 +92,7 @@ export const NavMenu: React.FC<{}> = () => {
             </Dropdown>
           </ul>
         </Collapse>
-      </Navbar>
+      </Navbar> */}
     </header>
   );
 };

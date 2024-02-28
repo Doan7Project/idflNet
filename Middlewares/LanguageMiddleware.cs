@@ -19,7 +19,7 @@ namespace idflNet.Middlewares
         static string GetCurrentLanguage(HttpContext httpContext)
         {
             httpContext.Request.Headers.TryGetValue("language", out var valueHeader);
-            return valueHeader.FirstOrDefault(LanguageConstant.LangValue.vi.ToString());
+            return valueHeader.FirstOrDefault(LanguageConstant.LangValue.vi.ToString())!;
         }
 
     }
