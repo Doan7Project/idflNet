@@ -13,7 +13,7 @@ namespace Core.Models
         public bool IsAdmin { get; set; }
         public bool IsVerified { get; set; }
         [JsonIgnore]
-        public string Password { get; set; }
-        public ICollection<UserClientInformationModel> UserClientInformationModels { get; set; }
+        public required string Password { get; set; }
+        public ICollection<UserClientInformationModel>? UserClientInformationModels { get; set; }
     }
 }
