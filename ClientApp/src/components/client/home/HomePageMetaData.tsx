@@ -26,7 +26,7 @@ export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
             Language: language,
           },
         });
-        setHomeSessionService(response.data.sessionServiceResult);
+        setHomeSessionService(response.data.sessionServices);
         console.log("home page data result: ", response?.data);
 
         setLoading(false);

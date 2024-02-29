@@ -1,4 +1,4 @@
-using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 

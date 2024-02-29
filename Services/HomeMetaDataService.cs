@@ -1,6 +1,5 @@
-using Core.Models;
 using idflNet.Constants;
-using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 using idflNet.Core.Resutls;
 using idflNet.Data;
 

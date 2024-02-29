@@ -1,8 +1,8 @@
-using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 
 namespace Core.Models
 {
-    public class BannerHomePageModel : BaseModel
+    public class BannerHomePageModel : BaseInterface
     {
         public string? Url { get; set; }
     }

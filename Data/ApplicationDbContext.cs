@@ -1,4 +1,5 @@
 using Core.Models;
+using idflNet.Core.Models;
 using idflNet.Core.Models.BaseModel;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,11 @@ namespace idflNet.Data
         public DbSet<UserClientInformationModel> UserClientInformation { get; set; }
         public DbSet<PageMetaDataModel> PageMetaData { get; set; }
         public DbSet<BannerHomePageModel> BannerHomePage { get; set; }
+        public DbSet<CategoryModel> Category { get; set; }
+        public DbSet<StandardModel> Standard { get; set; }
+        public DbSet<MediaModel> Media { get; set; }
+
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder

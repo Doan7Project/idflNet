@@ -1,10 +1,11 @@
 using System.Text.Json.Serialization;
 using idflNet.Constants;
 using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 
-namespace Core.Models
+namespace idflNet.Core.Models
 {
-    public class UserModel : BaseModel
+    public class UserModel : BaseInterface
     {
         public string? Name { get; set; }
         public string? Email { get; set; }
