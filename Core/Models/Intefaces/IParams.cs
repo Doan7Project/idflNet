@@ -1,6 +1,6 @@
 ﻿using idflNet.Constants;
 
-namespace idflNet.Core.Models.BaseModel
+namespace idflNet.Core.Models.Interfaces
 {
     public class IParams
     {

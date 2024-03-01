@@ -13,9 +13,9 @@ export class Layout extends Component<LayoutProps> {
     return (
       <div>
         <NavMenu />
-        <Container tag="main">
+        <div>
           {this.props.children}
-        </Container>
+        </div>
       </div>
     );
   }

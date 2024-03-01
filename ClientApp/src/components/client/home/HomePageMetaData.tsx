@@ -3,20 +3,18 @@ import LanguageUtils from "libs/languageUtil";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../home/HomePageMetaData.css";
+import { HomeBanner } from "./banner-component/home-banner";
+import { HomeHeader } from "./header-component/home-header";
+import { HomeService } from "./service-component/home-service";
 interface HomeMetaProp {
   apiUrl: string;
 }
-interface SessionServiceResult {
-  header: string;
-  subHeader: string;
-}
+
 export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
-  const [homeSessionService, setHomeSessionService] =
-    useState<SessionServiceResult | null>(null);
+  const [homeSessionService, setHomeSessionService] = useState();
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const location = useLocation();
-  console.log("home page data result: ", homeSessionService?.header);
   var language = LanguageUtils.loadCurrentLanguage();
   useEffect(() => {
     const populateWeatherData = async () => {
@@ -26,7 +24,7 @@ export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
             Language: language,
           },
         });
-        setHomeSessionService(response.data.sessionServiceResult);
+        setHomeSessionService(response.data);
         console.log("home page data result: ", response?.data);
 
         setLoading(false);
@@ -46,8 +44,9 @@ export const HomeMetaData: React.FC<HomeMetaProp> = ({ apiUrl }) => {
       {error && <p>{error}</p>}
       {homeSessionService && (
         <div>
-          <h1>{homeSessionService.header}</h1>
-          <h4>{homeSessionService.subHeader}</h4>
+          <HomeBanner data={homeSessionService} />
+          <HomeHeader data={homeSessionService} />
+          <HomeService data={homeSessionService} />
         </div>
       )}
     </>

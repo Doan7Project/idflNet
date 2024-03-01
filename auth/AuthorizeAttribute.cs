@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
-using Core.Models;
 using idflNet.Constants;
+using idflNet.Core.Models;
 
 namespace idflNet.auth
 {

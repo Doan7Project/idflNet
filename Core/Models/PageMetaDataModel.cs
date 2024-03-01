@@ -1,8 +1,8 @@
-using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 
-namespace Core.Models
+namespace idflNet.Core.Models
 {
-    public class PageMetaDataModel : BaseModel
+    public class PageMetaDataModel : BaseInterface
     {
         public string? Key { get; set; }
         public string? Session { get; set; }

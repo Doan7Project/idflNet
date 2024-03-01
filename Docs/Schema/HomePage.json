@@ -1,0 +1,32 @@
+{
+  "sessionBanners": [
+    {
+      "url": "string"
+    }
+  ],
+  "sessionServices": {
+    "header": "string",
+    "subHeader": "string"
+  },
+  "sessionCategories": [
+    {
+      "id":"Guild_id",
+      "name": "string",
+      "thumbnail": "string",
+      "Products": {
+        "id":"Guild_id",
+        "categoryId":"Guild_id",
+        "icon":"string"
+      }
+    }
+  ],
+  "sessionBranches": {
+    "header": "string",
+    "branches": [
+      {
+        "id": "Guild_id",
+        "icon": "string"
+      }
+    ]
+  }
+}

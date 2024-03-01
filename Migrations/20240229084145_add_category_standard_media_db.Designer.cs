@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using idflNet.Data;
 
@@ -10,9 +11,11 @@ using idflNet.Data;
 namespace idflNet.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240229084145_add_category_standard_media_db")]
+    partial class add_category_standard_media_db
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,20 +47,20 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7d86f180-e8cf-4a9f-bc3e-355522c8a180"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1976),
+                            Id = new Guid("153019a7-b1da-4e82-8d09-2e7732996fac"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7768),
                             Url = "/images/default/banner_1.jpg"
                         },
                         new
                         {
-                            Id = new Guid("cafad0eb-f76d-4d2b-bf08-4b254f0f04df"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1977),
+                            Id = new Guid("5b57b3d8-8f70-4dbe-9d17-b2854ecfbab2"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7780),
                             Url = "/images/default/banner_2.jpg"
                         },
                         new
                         {
-                            Id = new Guid("d3d789e0-c3ea-43fa-8bf6-fb7e90c0dd63"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1978),
+                            Id = new Guid("ca99628f-674c-4e93-ad8b-fc84a2a09dd1"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7782),
                             Url = "/images/default/banner_3.jpg"
                         });
                 });
@@ -87,44 +90,44 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f5e70a4e-8fa1-4eda-9b79-9de021ec5665"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2038),
+                            Id = new Guid("cbd1dbca-9de3-44d2-88db-0e80844b3ae2"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7853),
                             Url = "/images/default/icon_1.png"
                         },
                         new
                         {
-                            Id = new Guid("9634031a-7389-4256-ae79-39ff228f82d0"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2040),
+                            Id = new Guid("352baa1c-3631-44da-834e-98892a85156f"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7856),
                             Url = "/images/default/icon_2.png"
                         },
                         new
                         {
-                            Id = new Guid("16716443-c3df-4dd3-be31-38668bbdc88f"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2043),
+                            Id = new Guid("76274a0a-590d-4e10-99db-dde8c7e94e85"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7857),
                             Url = "/images/default/icon_3.png"
                         },
                         new
                         {
-                            Id = new Guid("1169f234-39fb-4962-9fec-19f6a8a5c39d"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2044),
+                            Id = new Guid("33c6f5a3-5008-41e9-8e65-ee26d276d01d"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7859),
                             Url = "/images/default/icon_4.png"
                         },
                         new
                         {
-                            Id = new Guid("d0aea2a3-fe1b-4db1-bc48-87d333802b55"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2045),
+                            Id = new Guid("d45b816f-ec3c-434c-90f8-8176674d6b21"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7861),
                             Url = "/images/default/icon_5.png"
                         },
                         new
                         {
-                            Id = new Guid("ac2a054b-cdca-4077-889a-06110f847d5e"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2046),
+                            Id = new Guid("3d671336-2e4a-4262-812b-add51e38fcb6"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7863),
                             Url = "/images/default/icon_6.png"
                         },
                         new
                         {
-                            Id = new Guid("d993b574-f213-41f0-ac8e-047cd2ea7839"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2047),
+                            Id = new Guid("b182db0b-3e14-4851-adfb-411e879abc9b"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7864),
                             Url = "/images/default/icon_7.png"
                         });
                 });
@@ -225,61 +228,61 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3d57ffe4-3906-41bc-b68d-8fe7ea4ad7d4"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1999),
+                            Id = new Guid("76150aee-a938-4172-b213-0304b9f95c39"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7803),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Name = "GLOBAL RECYLED STANDARD",
                             Thumbnail = "/images/default/category_1.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c9371a0c-6cf9-4778-8892-9e05be786161"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1997),
+                            Id = new Guid("8a91040f-020b-4e1f-a972-06c4cb33c240"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7800),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Name = "TIÊU CHUẨN TÁI CHẾ TOÀN CẦU",
                             Thumbnail = "/images/default/category_1.jpg"
                         },
                         new
                         {
-                            Id = new Guid("4307e2fe-c94e-475a-9a06-857dfeea21b2"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2001),
+                            Id = new Guid("11894bcd-fd13-4ce6-b053-f766479dbef5"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7806),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Name = "TIÊU CHUẨN DỆT HỮU CƠ TOÀN CẦU",
                             Thumbnail = "/images/default/category_2.jpg"
                         },
                         new
                         {
-                            Id = new Guid("fe481bba-e46f-4d89-bcb1-7ac1ba92322f"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2003),
+                            Id = new Guid("88cac7c0-9fb3-4b3e-8d6f-bfa579907779"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7808),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Name = "GLOBAL ORGANIC TEXTILE STANDARD",
-                            Thumbnail = "/images/default/category_2.jpg"
+                            Thumbnail = "/images/default/category_2.png"
                         },
                         new
                         {
-                            Id = new Guid("e40bcda2-0ea6-4255-b578-e9a919fb7a5a"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2006),
+                            Id = new Guid("b4cf7466-4f50-4678-a545-12149297b8cd"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7834),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Name = "RESPONSIBLE WOOL STANDARD",
-                            Thumbnail = "/images/default/category_3.jpg"
+                            Thumbnail = "/images/default/category_3.png"
                         },
                         new
                         {
-                            Id = new Guid("a1e69ff5-6390-4aa8-9c6c-2759ac0988f6"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(2004),
+                            Id = new Guid("945276ee-ca0c-40d1-b386-63c5eebe2bb2"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7811),
                             Description = "",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Name = "TIÊU CHUẨN LEN CÓ TRÁCH NHIỆM",
                             Thumbnail = "/images/default/category_3.jpg"
                         });
@@ -316,17 +319,17 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            Id = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Code = "vi",
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1910),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7690),
                             IsActive = true,
                             Name = "Tiếng việt"
                         },
                         new
                         {
-                            Id = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            Id = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Code = "en",
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1930),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7709),
                             IsActive = true,
                             Name = "English"
                         });
@@ -371,41 +374,41 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1a15fa40-f71b-48e0-b406-45c8021f78af"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1952),
+                            Id = new Guid("60d549cb-d3d4-4b08-b3cd-01eedbbcf03e"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7738),
                             Field = "header",
                             Key = "home",
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Session = "sessionService",
                             Value = "CHÚNG TÔI ĐẢM BẢO CHẤT LƯỢNG"
                         },
                         new
                         {
-                            Id = new Guid("3acb4ce1-3a42-45d4-939b-b014510ac57d"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1954),
+                            Id = new Guid("a5cde2c5-08ed-4adb-b070-32ad43636cf2"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7741),
                             Field = "header",
                             Key = "home",
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Session = "sessionService",
                             Value = "WE GUARANTEE QUALITY"
                         },
                         new
                         {
-                            Id = new Guid("f7d6d50e-83f9-4e91-bbad-227275f0b5f2"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1956),
+                            Id = new Guid("9956785d-3be1-4701-9990-5936265a29f3"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7744),
                             Field = "subHeader",
                             Key = "home",
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
                             Session = "sessionService",
                             Value = "DFL tiến hành kiểm tra tại chỗ và xem xét tài liệu để xác minh khả năng truy xuất nguồn gốc của nhà cung cấp và các yếu tố xã hội, hóa học, môi trường và phúc lợi động vật. Nhấp vào bên dưới để tìm hiểu chi tiết về từng chứng nhận kiểm toán do IDFL cung cấp."
                         },
                         new
                         {
-                            Id = new Guid("07d93c37-09fa-4adb-81fa-b0a99fd928ac"),
-                            CreatedAt = new DateTime(2024, 3, 1, 9, 22, 1, 573, DateTimeKind.Local).AddTicks(1958),
+                            Id = new Guid("72f8cd97-4260-4497-ae45-3b7c9ab8b5bb"),
+                            CreatedAt = new DateTime(2024, 2, 29, 15, 41, 45, 713, DateTimeKind.Local).AddTicks(7746),
                             Field = "subHeader",
                             Key = "home",
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
                             Session = "sessionService",
                             Value = "DFL conducts on-site audits, and documentation reviews to verify supplier traceability and social, chemical, environmental and animal welfare. Click below to learn details about each of the audit certifications offered by IDFL."
                         });
@@ -459,142 +462,142 @@ namespace idflNet.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9bdf1599-e2de-45e7-b531-32a0b87e2fcb"),
-                            CategoryId = new Guid("c9371a0c-6cf9-4778-8892-9e05be786161"),
+                            Id = new Guid("7faf4fa4-7bf1-4aa2-a966-edcb758d70eb"),
+                            CategoryId = new Guid("8a91040f-020b-4e1f-a972-06c4cb33c240"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("f5e70a4e-8fa1-4eda-9b79-9de021ec5665"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("cbd1dbca-9de3-44d2-88db-0e80844b3ae2"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("a74f4eaf-02b1-4b41-b55f-1792d33536b1"),
-                            CategoryId = new Guid("3d57ffe4-3906-41bc-b68d-8fe7ea4ad7d4"),
+                            Id = new Guid("7b9c836f-1791-4381-acfd-8b7f7fa2054a"),
+                            CategoryId = new Guid("76150aee-a938-4172-b213-0304b9f95c39"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("f5e70a4e-8fa1-4eda-9b79-9de021ec5665"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("cbd1dbca-9de3-44d2-88db-0e80844b3ae2"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("55ff6426-b560-416b-bb08-2809d7dc64d0"),
-                            CategoryId = new Guid("c9371a0c-6cf9-4778-8892-9e05be786161"),
+                            Id = new Guid("16dccc90-3a21-4204-8251-6d663531030c"),
+                            CategoryId = new Guid("8a91040f-020b-4e1f-a972-06c4cb33c240"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("9634031a-7389-4256-ae79-39ff228f82d0"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("352baa1c-3631-44da-834e-98892a85156f"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("4b0afd4b-92c6-4a8a-b4c7-046777e341ba"),
-                            CategoryId = new Guid("3d57ffe4-3906-41bc-b68d-8fe7ea4ad7d4"),
+                            Id = new Guid("bb0e61a1-a9f3-4ca3-add9-6b368f95d7e0"),
+                            CategoryId = new Guid("76150aee-a938-4172-b213-0304b9f95c39"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("9634031a-7389-4256-ae79-39ff228f82d0"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("352baa1c-3631-44da-834e-98892a85156f"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("c0577bc6-a2f1-40c8-ae2c-cd3084aa722d"),
-                            CategoryId = new Guid("4307e2fe-c94e-475a-9a06-857dfeea21b2"),
+                            Id = new Guid("e663aa1a-9113-4c5c-bf85-3e30b7987c9d"),
+                            CategoryId = new Guid("11894bcd-fd13-4ce6-b053-f766479dbef5"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("16716443-c3df-4dd3-be31-38668bbdc88f"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("76274a0a-590d-4e10-99db-dde8c7e94e85"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("c7e06a22-4b75-4971-b207-0a4d8b730ea6"),
-                            CategoryId = new Guid("fe481bba-e46f-4d89-bcb1-7ac1ba92322f"),
+                            Id = new Guid("1c28fe96-fb04-4457-8592-ba2edb390182"),
+                            CategoryId = new Guid("88cac7c0-9fb3-4b3e-8d6f-bfa579907779"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
-                            MediaId = new Guid("16716443-c3df-4dd3-be31-38668bbdc88f"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
+                            MediaId = new Guid("76274a0a-590d-4e10-99db-dde8c7e94e85"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("ecdde7c8-4633-4b87-94ab-af906797d857"),
-                            CategoryId = new Guid("4307e2fe-c94e-475a-9a06-857dfeea21b2"),
+                            Id = new Guid("3e96232f-d321-4dd3-821b-f59f1ee32cf1"),
+                            CategoryId = new Guid("11894bcd-fd13-4ce6-b053-f766479dbef5"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("1169f234-39fb-4962-9fec-19f6a8a5c39d"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("33c6f5a3-5008-41e9-8e65-ee26d276d01d"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("73553aae-c462-4884-8bec-77c82bc3cb2d"),
-                            CategoryId = new Guid("fe481bba-e46f-4d89-bcb1-7ac1ba92322f"),
+                            Id = new Guid("d12630fb-c5e3-4844-ada2-87b7be54cbf2"),
+                            CategoryId = new Guid("88cac7c0-9fb3-4b3e-8d6f-bfa579907779"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
-                            MediaId = new Guid("1169f234-39fb-4962-9fec-19f6a8a5c39d"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
+                            MediaId = new Guid("33c6f5a3-5008-41e9-8e65-ee26d276d01d"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("e9de9468-9638-4f18-9d3b-b43fc5708b7e"),
-                            CategoryId = new Guid("a1e69ff5-6390-4aa8-9c6c-2759ac0988f6"),
+                            Id = new Guid("a6827887-8853-4971-ba68-e82c1cbe2772"),
+                            CategoryId = new Guid("945276ee-ca0c-40d1-b386-63c5eebe2bb2"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("d0aea2a3-fe1b-4db1-bc48-87d333802b55"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("d45b816f-ec3c-434c-90f8-8176674d6b21"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("0ce4c957-f759-46a6-9b38-2b69d1c0d5bd"),
-                            CategoryId = new Guid("e40bcda2-0ea6-4255-b578-e9a919fb7a5a"),
+                            Id = new Guid("427dcb7f-7a23-4b28-9219-4dec5f452f8c"),
+                            CategoryId = new Guid("b4cf7466-4f50-4678-a545-12149297b8cd"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
-                            MediaId = new Guid("d0aea2a3-fe1b-4db1-bc48-87d333802b55"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
+                            MediaId = new Guid("d45b816f-ec3c-434c-90f8-8176674d6b21"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("2b678a60-1d38-414c-a5c3-356245631913"),
-                            CategoryId = new Guid("a1e69ff5-6390-4aa8-9c6c-2759ac0988f6"),
+                            Id = new Guid("f7058002-f332-4ed7-a6ed-d35baeb76fcb"),
+                            CategoryId = new Guid("945276ee-ca0c-40d1-b386-63c5eebe2bb2"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("ac2a054b-cdca-4077-889a-06110f847d5e"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("3d671336-2e4a-4262-812b-add51e38fcb6"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("d4b98db9-5bdf-4ba2-a959-e06fa7707196"),
-                            CategoryId = new Guid("e40bcda2-0ea6-4255-b578-e9a919fb7a5a"),
+                            Id = new Guid("30a126ea-62d9-4449-b020-44a937dc81b7"),
+                            CategoryId = new Guid("b4cf7466-4f50-4678-a545-12149297b8cd"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
-                            MediaId = new Guid("ac2a054b-cdca-4077-889a-06110f847d5e"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
+                            MediaId = new Guid("3d671336-2e4a-4262-812b-add51e38fcb6"),
                             Name = "Global Recycled Standard (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("8262733c-52f8-4d69-8bd4-096ce94298ba"),
-                            CategoryId = new Guid("a1e69ff5-6390-4aa8-9c6c-2759ac0988f6"),
+                            Id = new Guid("48fe24be-895d-4d16-b4b8-bbe4b6607895"),
+                            CategoryId = new Guid("945276ee-ca0c-40d1-b386-63c5eebe2bb2"),
                             Description = "<p>Ti&ecirc;u chuẩn c&oacute; s&aacute;u mục ti&ecirc;u: (1) điều chỉnh c&aacute;c định nghĩa về &quot;t&aacute;i chế&quot; tr&ecirc;n nhiều ứng dụng, (2) theo d&otilde;i v&agrave; truy t&igrave;m nguy&ecirc;n liệu đầu v&agrave;o được t&aacute;i chế, (3) cung cấp cho kh&aacute;ch h&agrave;ng c&ocirc;ng cụ để đưa ra quyết định s&aacute;ng suốt, (4) giảm t&aacute;c động c&oacute; hại của sản xuất dựa tr&ecirc;n con người v&agrave; m&ocirc;i trường, (5) đảm bảo rằng vật liệu trong sản phẩm cuối c&ugrave;ng được t&aacute;i chế v&agrave; xử l&yacute; bền vững v&agrave; (6) th&uacute;c đẩy đổi mới trong việc giải quyết c&aacute;c vấn đề chất lượng li&ecirc;n quan đến việc sử dụng vật liệu t&aacute;i chế.</p>\n                <p><strong>Phạm vi</strong><br />\n                Người nộp đơn c&oacute; thể chọn loại vật liệu t&aacute;i chế m&agrave; họ muốn kiểm to&aacute;n. C&aacute;c vật liệu t&aacute;i chế phổ biến bao gồm l&ocirc;ng tơ v&agrave; l&ocirc;ng vũ, PET, d&acirc;y t&oacute;c, sợi/chỉ v&agrave; vải. C&aacute;c c&ocirc;ng ty đăng k&yacute;, chẳng hạn như c&aacute;c thương hiệu v&agrave; nh&agrave; sản xuất, c&oacute; thể chọn sản phẩm cuối c&ugrave;ng m&agrave; họ muốn đ&aacute;nh gi&aacute;. Một danh s&aacute;ch đầy đủ c&aacute;c sản phẩm v&agrave; danh mục sản phẩm c&oacute; thể được t&igrave;m thấy ở đ&acirc;y.</p>\n                <p><strong>Y&ecirc;u cầu</strong><br />\n                C&aacute;c vật liệu v&agrave; sản phẩm được lựa chọn sẽ được đ&aacute;nh gi&aacute; dựa tr&ecirc;n y&ecirc;u cầu trong c&aacute;c lĩnh vực sau:<br />\n                T&aacute;i chế<br />\n                Chuỗi cung ứng<br />\n                X&atilde; hội<br />\n                Thuộc về m&ocirc;i trường<br />\n                H&oacute;a chất</p>",
                             IsActive = true,
-                            LanguageId = new Guid("d1069c73-bc86-4db7-a886-c344c0d8bb93"),
-                            MediaId = new Guid("d993b574-f213-41f0-ac8e-047cd2ea7839"),
+                            LanguageId = new Guid("61694b70-b096-44e2-8d8a-4e5a81e9af1f"),
+                            MediaId = new Guid("b182db0b-3e14-4851-adfb-411e879abc9b"),
                             Name = "Tiêu chuẩn tái chế toàn cầu (GRS)"
                         },
                         new
                         {
-                            Id = new Guid("34159ea9-b87e-473b-884d-f4e181d90bf0"),
-                            CategoryId = new Guid("e40bcda2-0ea6-4255-b578-e9a919fb7a5a"),
+                            Id = new Guid("57210705-662e-47c1-b983-efd47181a1f1"),
+                            CategoryId = new Guid("b4cf7466-4f50-4678-a545-12149297b8cd"),
                             Description = "<h3><strong>Aims</strong></h3>\n                <p>The aim of the Global Recycled Standard (GRS) is to increase the use of recycled materials.</p>\n                <p>The Standard has six objectives: (1) aligning definitions of &quot;recycled&quot; across multiple applications, (2) tracking and tracing recycled input materials, (3) providing customers with a tool to make informed decisions, (4) reducing the harmful impact of production on people and the environment, (5) providing assurance that materials in a final product are recycled and processed sustainably and (6) driving innovation in addressing quality issues related to the use of recycled materials.</p>\n                <h3><strong>Scope</strong></h3>\n                <p>Applicants may choose the types of recycled materials they want to have audited. Common recycled materials include down and feathers, PET, filament, yarn/thread and fabric. Applicant companies, such as brands and manufacturers, may select the final products they would like to have audited. A complete list of products and product categories can be found&nbsp;<a href='https://idfl.com/textile-exchange-te-mapping-product-categories-and-product-details/'>here</a>.</p>\n                <h3><strong>Requirements</strong></h3>\n                <p>The selected materials and products will be evaluated based upon requirements in the following areas:</p>\n                <ul>\n                    <li>Recycling</li>\n                    <li>Supply Chain</li>\n                    <li>Social</li>\n                    <li>Environmental</li>\n                    <li>Chemical</li>\n                </ul>",
                             IsActive = true,
-                            LanguageId = new Guid("3203e6d1-59e2-4656-8d9b-4526e165e347"),
-                            MediaId = new Guid("d993b574-f213-41f0-ac8e-047cd2ea7839"),
+                            LanguageId = new Guid("9d8ec89e-1cc1-46eb-88e0-1d303f7a8a74"),
+                            MediaId = new Guid("b182db0b-3e14-4851-adfb-411e879abc9b"),
                             Name = "Global Recycled Standard (GRS)"
                         });
                 });

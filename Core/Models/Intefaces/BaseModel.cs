@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace idflNet.Core.Models.BaseModel
+namespace idflNet.Core.Models.Interfaces
 {
-    public class BaseModel
+    public class BaseInterface
     {
         [Key]
         public Guid Id { get; set; }

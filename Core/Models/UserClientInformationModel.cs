@@ -1,5 +1,5 @@
 using Core.Models;
-using idflNet.Core.Models.BaseModel;
+using idflNet.Core.Models.Interfaces;
 
 namespace idflNet.Core.Models.BaseModel
 {

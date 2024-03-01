@@ -57,11 +57,13 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    z-index: 100;
 }
 .navbar-container_dropdown-container:hover .navbar-container_dropdown-list_language{
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    z-index: 100;
 }
 .navbar-container_dropdown-list_language ul li a:hover{
     color: var(--text-down-list-hover);

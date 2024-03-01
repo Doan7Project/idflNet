@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace idflNet.Core.Models.BaseModel
+namespace idflNet.Core.Models.Interfaces
 {
-    public class ContentModel : BaseModel
+    public class ContentModel : BaseInterface
     {
         [Required, MinLength(5), MaxLength(100)]
         public string? Name { get; set; }
