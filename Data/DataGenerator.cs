@@ -81,19 +81,19 @@ namespace idflNet.Data
             var banner_1 = new BannerHomePageModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/banner_1.jpg"),
+                Url = "/images/default/banner_1.jpg",
                 CreatedAt = DateTime.Now,
             };
             var banner_2 = new BannerHomePageModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/banner_2.jpg"),
+                Url = "/images/default/banner_2.jpg",
                 CreatedAt = DateTime.Now,
             };
             var banner_3 = new BannerHomePageModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/banner_3.jpg"),
+                Url = "/images/default/banner_3.jpg",
                 CreatedAt = DateTime.Now,
             };
             modelBuilder
@@ -109,7 +109,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "TIÊU CHUẨN TÁI CHẾ TOÀN CẦU",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_1.jpg"),
+                Thumbnail = "/images/default/category_1.jpg",
                 LanguageId = LanguageVi.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -119,7 +119,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "GLOBAL RECYLED STANDARD",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_1.jpg"),
+                Thumbnail = "/images/default/category_1.jpg",
                 LanguageId = LanguageEn.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -129,7 +129,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "TIÊU CHUẨN DỆT HỮU CƠ TOÀN CẦU",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_2.jpg"),
+                Thumbnail = "/images/default/category_2.jpg",
                 LanguageId = LanguageVi.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -139,7 +139,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "GLOBAL ORGANIC TEXTILE STANDARD",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_2.png"),
+                Thumbnail = "/images/default/category_2.jpg",
                 LanguageId = LanguageEn.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -149,7 +149,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "TIÊU CHUẨN LEN CÓ TRÁCH NHIỆM",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_3.jpg"),
+                Thumbnail = "/images/default/category_3.jpg",
                 LanguageId = LanguageVi.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -159,7 +159,7 @@ namespace idflNet.Data
                 Id = Guid.NewGuid(),
                 Name = "RESPONSIBLE WOOL STANDARD",
                 Description = "",
-                Thumbnail = CheckExistFileUtils.CheckExistFile("/uploads/default/category_3.png"),
+                Thumbnail = "/images/default/category_3.jpg",
                 LanguageId = LanguageEn.Id,
                 IsActive = true,
                 CreatedAt = DateTime.Now
@@ -173,43 +173,43 @@ namespace idflNet.Data
             var icon_1 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_1.png"),
+                Url = "/images/default/icon_1.png",
                 CreatedAt = DateTime.Now
             };
             var icon_2 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_2.png"),
+                Url = "/images/default/icon_2.png",
                 CreatedAt = DateTime.Now
             };
             var icon_3 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_3.png"),
+                Url = "/images/default/icon_3.png",
                 CreatedAt = DateTime.Now
             };
             var icon_4 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_4.png"),
+                Url = "/images/default/icon_4.png",
                 CreatedAt = DateTime.Now
             };
             var icon_5 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_5.png"),
+                Url = "/images/default/icon_5.png",
                 CreatedAt = DateTime.Now
             };
             var icon_6 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_6.png"),
+                Url = "/images/default/icon_6.png",
                 CreatedAt = DateTime.Now
             };
             var icon_7 = new MediaModel
             {
                 Id = Guid.NewGuid(),
-                Url = CheckExistFileUtils.CheckExistFile("/uploads/default/icon_7.png"),
+                Url = "/images/default/icon_7.png",
                 CreatedAt = DateTime.Now
             };
             modelBuilder

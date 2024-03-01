@@ -7,8 +7,7 @@ namespace Utils
         {
             if (!string.IsNullOrEmpty(value))
             {
-                string file = value.Replace(StaticPathFile.staticMetaPath, string.Empty);
-                string pathFile = Path.Combine(StaticPathFile.staticPath, file);
+                string pathFile = Path.Combine(StaticPathFile.staticPath);
                 if (System.IO.File.Exists(pathFile))
                 {
                     return value;

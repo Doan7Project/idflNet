@@ -7,6 +7,7 @@ using idflNet.Repository;
 using idflNet.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Services;
 using System.Text;
@@ -34,6 +35,7 @@ builder.Services.AddScoped<IJwtUtilRepository, JwtUtils>();
 builder.Services.AddScoped<IUserRepository, UserService>();
 builder.Services.AddTransient<HomeMetaDataService>();
 var app = builder.Build();
+var env = app.Services.GetRequiredService<IWebHostEnvironment>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -41,9 +43,14 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+var path = app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Uploads"))
+    ,
+    RequestPath = "/images"
+});
+
 app.UseRouting();
 //Auth
 app.UseAuthentication();
